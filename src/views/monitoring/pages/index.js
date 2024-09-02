@@ -1,0 +1,5 @@
+export { default as Home } from './home.vue'
+export { default as Peranalysis } from './peranalysis.vue'
+export { default as Performance } from './performance.vue'
+export { default as Reports } from './reports.vue'
+export { default as Tasks } from './tasks.vue'

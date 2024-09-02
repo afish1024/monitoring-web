@@ -1,0 +1,220 @@
+render(data){
+      const stage = this.stage;
+      const layer = this.layer;
+        
+
+      var s1 = node(0, -300, tp2, '服务器',150,150);
+      var s2 = node(-500, 0, tp15, '云网关', 100, 50);
+      var s3 = node(0, 0, tp15, '云网关', 100, 50);
+      var s4 = node(500, 0, tp15, '云网关', 100, 50);
+
+
+
+      var s5 = node(-750, 100, tp7, '', 30, 40);
+      var s6 = node(-750, 160, tp7, '',30,40);
+      var s7 = node(-750, 220, tp7, '',30,40);
+      var s8 = node(-750, 280, tp7, '测控保护', 30, 40);
+      
+
+      var s9 = node(-650, 100, tp14, '', 40, 40);
+      var s10 = node(-650, 160, tp14, '',40,40);
+      var s11 = node(-650, 220, tp14, '',40,40);
+      var s12 = node(-650, 280, tp14, '无线测温', 40, 40);
+      
+      var s13 = node(-550, 100, tp1, '', 40, 20);
+      var s14= node(-550, 160, tp1, '', 40, 20);
+      var s15 = node(-550, 220, tp1, '', 40, 20);
+      var s16 = node(-550, 280, tp1, '测控仪',  40, 20);
+      
+
+      var s17 = node(-450, 100, tp4, '', 30, 40);
+      var s18= node(-450, 160, tp4, '',30,40);
+      var s19 = node(-450, 220, tp4, '',30,40);
+      var s20 = node(-450, 280, tp4, '智能仪表', 30, 40);
+
+      
+      var s21 = node(-350, 100, tp13, '', 40, 40);
+      var s22= node(-350, 160, tp13, '',40,40);
+      var s23 = node(-350, 220, tp13, '',40,40);
+      var s24 = node(-350, 280, tp13, '低压测温', 40, 40);
+
+
+
+      var s25 = node(-250, 100, tp12, '', 30, 40);
+      var s26 = node(-250, 160, tp12, '',30,40);
+      var s27 = node(-250, 220, tp12, '',30,40);
+      var s28 = node(-250, 280, tp12, '摄像头', 30, 40);
+
+
+
+              
+      var s29 = node(-100, 200, tp7, '测控保护', 30, 40);
+
+      var s30 = node(-50, 280, tp14, '无线测温',40,40);
+
+      var s31 = node(50, 100, tp4, '',30,40);
+      var s32 = node(50, 160, tp4, '', 30, 40);
+      var s33 = node(50, 220, tp4, '',30,40);
+      var s34 = node(50, 280, tp4, '智能仪表', 30, 40);
+
+
+      var s35 = node(150, 100, tp13, '',40,40);
+      var s36 = node(150, 160, tp13, '', 40, 40);
+      var s37 = node(150, 220, tp13, '',40,40);
+      var s38 = node(150, 280, tp13, '低压测温', 40, 40);
+
+
+      
+      var s39 = node(250, 100, tp12, '',30,40);
+      var s40 = node(250, 160, tp12, '', 30, 40);
+      var s41 = node(250, 220, tp12, '',30,40);
+      var s42 = node(250, 280, tp12, '摄像头', 30, 40);
+
+
+
+
+                    
+      var s43 = node(400, 200, tp7, '测控保护', 30, 40);
+
+      var s44 = node(450, 280, tp14, '无线测温',40,40);
+
+      var s45 = node(550, 100, tp4, '',30,40);
+      var s46 = node(550, 160, tp4, '', 30, 40);
+      var s47 = node(550, 220, tp4, '',30,40);
+      var s48 = node(550, 280, tp4, '智能仪表', 30, 40);
+
+
+      var s49 = node(650, 100, tp13, '',40,40);
+      var s50 = node(650, 160, tp13, '', 40, 40);
+      var s51 = node(650, 220, tp13, '',40,40);
+      var s52 = node(650, 280, tp13, '低压测温', 40, 40);
+
+
+      
+      var s53 = node(750, 100, tp12, '',30,40);
+      var s54 = node(750, 160, tp12, '', 30, 40);
+      var s55 = node(750, 220, tp12, '',30,40);
+      var s56 = node(750, 280, tp12, '摄像头', 30, 40);
+
+
+
+      var s57 = node(-500, -200, tp3, 'UPS', 60, 80);
+      var s58 = node(-650, -200, tp8, '监控主机',60,80);
+      var s59 = node(-800, -200, tp17, '打印机', 60, 80);
+
+      var s60 = node(300, -400, tp18, '打印机', 100, 100);
+
+      
+      links.push(new Link(null, s1, s2));
+      links.push(new Link(null, s1, s3));
+      links.push(new Link(null, s1, s4));
+
+
+      // links.push(new FlexionalLink('text', s2, s5,'lt' ,'rt' ))
+      
+      FlexLink(s2, s5,'','lt' ,'rm');
+      FlexLink(s2, s6,'','lt' ,'rm');
+      FlexLink(s2, s7,'','lt' ,'rm');
+      FlexLink(s2, s8,'','lt' ,'rm');
+      
+
+      FlexLink(s2, s9,'','lm' ,'rm');
+      FlexLink(s2, s10,'','lm' ,'rm');
+      FlexLink(s2, s11,'','lm' ,'rm');
+      FlexLink(s2, s12, '', 'lm', 'rm');
+      
+      FlexLink(s2, s13,'','cb' ,'rm');
+      FlexLink(s2, s14,'','cb' ,'rm');
+      FlexLink(s2, s15,'','cb' ,'rm');
+      FlexLink(s2, s16, '', 'cb', 'rm');
+      
+      FlexLink(s2, s17,'','cb' ,'lm');
+      FlexLink(s2, s18,'','cb' ,'lm');
+      FlexLink(s2, s19,'','cb' ,'lm');
+      FlexLink(s2, s20, '', 'cb', 'lm');
+      
+      FlexLink(s2, s21,'','rm' ,'lm');
+      FlexLink(s2, s22,'','rm' ,'lm');
+      FlexLink(s2, s23,'','rm' ,'lm');
+      FlexLink(s2, s24, '', 'rm', 'lm');
+      
+      FlexLink(s2, s25,'','rt' ,'lm');
+      FlexLink(s2, s26,'','rt' ,'lm');
+      FlexLink(s2, s27,'','rt' ,'lm');
+      FlexLink(s2, s28, '', 'rt', 'lm');
+      
+      FlexLink(s3, s29,'','rm' ,'lm');
+      FlexLink(s3, s30, '', 'rm', 'lm');
+      
+      FlexLink(s3, s31,'','cb','lm');
+      FlexLink(s3, s32,'','cb','lm');
+      FlexLink(s3, s33,'','cb','lm');
+      FlexLink(s3, s34, '', 'cb', 'lm');
+      
+
+      FlexLink(s3, s35,'','rm','lm');
+      FlexLink(s3, s36,'','rm','lm');
+      FlexLink(s3, s37,'','rm','lm');
+      FlexLink(s3, s38, '', 'rm', 'lm');
+      
+      
+      FlexLink(s3, s39,'','rt','lm');
+      FlexLink(s3, s40,'','rt','lm');
+      FlexLink(s3, s41,'','rt','lm');
+      FlexLink(s3, s42, '', 'rt', 'lm');
+      
+
+
+      FlexLink(s4, s43,'','rm' ,'lm');
+      FlexLink(s4, s44, '', 'rm', 'lm');
+      
+      FlexLink(s4, s45,'','cb','lm');
+      FlexLink(s4, s46,'','cb','lm');
+      FlexLink(s4, s47,'','cb','lm');
+      FlexLink(s4, s48, '', 'cb', 'lm');
+      
+
+      FlexLink(s4, s49,'','rm','lm');
+      FlexLink(s4, s50,'','rm','lm');
+      FlexLink(s4, s51,'','rm','lm');
+      FlexLink(s4, s52, '', 'rm', 'lm');
+      
+      
+      FlexLink(s4, s53,'','rt','lm');
+      FlexLink(s4, s54,'','rt','lm');
+      FlexLink(s4, s55,'','rt','lm');
+      FlexLink(s4, s56,'','rt','lm');
+
+      links.push(new Link(null, s58, s57));
+      links.push(new Link(null, s58, s59));
+    
+
+      linkNode(s58, s2, '', 'cb', 'ct');
+      linkNode(s58, s3,'','cb','ct');
+      linkNode(s58, s4,'','cb','ct');
+
+      //TODO: 根据data 来绘制
+    
+
+      // 设置节点填充颜色
+      // fromNode.css({
+      //     fillStyle: 'orange',
+      //     font: 'bold 12px arial',
+      // });
+
+      // toNode.css({
+      //     fillStyle: 'blue',
+      // });
+
+    
+      // layer.addChilds([fromNode, toNode, link]);
+      layer.addChilds(links);
+      layer.addChilds(nodes);
+      layer.addChild(fromNode)
+      layer.addChild(fromNode2)
+      layer.addChild(fromNode3)
+      layer.addChild(fromNode4)
+      // fromNode.on('mousedown', ()=>{
+      //     fromNode.text = 'mousedown';
+      // });
+    }

@@ -1,0 +1,64 @@
+<template>
+	<div id="apiabnormal"></div>
+</template>
+<script setup name="apiabnormal">
+	import { onMounted } from 'vue'
+	import * as echarts from 'echarts'
+    const props = defineProps({
+		summary:Array,
+	})
+    let errorNumber = 10
+    let goodNumber = 5
+	onMounted(() => {
+        // if(props.summary.api_error_count){
+        //     errorNumber = props.summary.api_error_count
+        // }
+        // if(props.summary.api_goods_count){
+        //     goodNumber = props.summary.api_goods_count
+        // }
+		let Echarts = echarts.init(document.getElementById('apiabnormal'))
+		const option  = {
+            title: {
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'right',
+                top:'center',
+                textStyle: { //图例文字的样式
+					color: '#fff',
+					fontSize: 14
+				}
+            },
+            color:['#ff6b48','#29cfb2'],
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: '70%',
+                    data: [
+                        { value: errorNumber, name: '异常' },
+                        { value: goodNumber, name: '正常' },
+                    ],
+                    emphasis: {
+                        itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    label:{
+                        color:'#FFF'
+                    }
+                }
+            ]
+        }
+		
+		// 绘制图表
+		Echarts.setOption(option)
+	})
+</script>
+
+<style scoped></style>
